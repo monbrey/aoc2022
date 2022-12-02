@@ -9,7 +9,7 @@ inputfile.close()
 elves = input.strip().split("\n\n")
 
 for i, elf in enumerate(elves):
-	elves[i] = sum(map(int, elf.split("\n")))
+  elves[i] = sum(map(int, elf.split("\n")))
 
 print(f"Part 1: {max(elves)}")
 
