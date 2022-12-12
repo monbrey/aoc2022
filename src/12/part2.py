@@ -45,14 +45,13 @@ def bfs(graph, visited, start):
 		x,y = cell
 		print(cell)
 		if graph[cell] == 1: # its a possible starting cell
-			shortest = min(dist[cell], shortest)
+			return dist[cell]
 		for i in range(4):
 			next = (x+dx[i],y+dy[i])
 			if can_visit(visited, cell, next):
 				dist[next] = dist[cell]+1
 				q.append(next)
 				visited[next] = True
-	return shortest
 
 
 print(bfs(graph,visited,start))
