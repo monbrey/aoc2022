@@ -27,7 +27,7 @@ def calculate(l, op):
 def round():
 	for monkey in monkeys:
 		for j in range(0, len(monkey['items'])):
-			item = monkey['items'].pop(0)
+			item = monkey['items'].pop()
 			item = calculate(item, monkey['op'])
 			target = monkeys[monkey['test'][1] if (item % monkey['test'][0]) == 0 else monkey['test'][2]]
 			target['items'].append(item)
