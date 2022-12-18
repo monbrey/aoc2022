@@ -20,8 +20,6 @@ for row in range(0,graph.shape[0]):
 			end = (row,col)
 			graph[row][col] = 26
 
-print(end)
-
 dx = [-1,0,1,0]
 dy = [0,-1,0,1]
 
@@ -46,7 +44,6 @@ def bfs(graph, visited, start):
 	while len(q) > 0:
 		cell = q.popleft()
 		x,y = cell
-		print(cell)
 		if cell == end:
 			return dist[cell]
 		for i in range(4):
